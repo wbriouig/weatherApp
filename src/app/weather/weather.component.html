@@ -1,38 +1,49 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-6">
-      <h3 class="text-center my-4" id="search_weather">Search for Weather:</h3>
-      <form
-            [formGroup]="weatherSearchForm" (ngSubmit)="sendToAPIXU(weatherSearchForm.value)">
-        <div class="form-group">
-          <input class="form-control"
-                 type="text"
-                 id="weatherLocation"
-                 aria-describedby="weatherLocation"
-                 placeholder="Please Enter a Location"
-                 formControlName="location" />
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <!-- Search Form Section -->
+      <div class="card shadow-sm mb-4">
+        <div class="card-header text-center bg-primary text-white">
+          <h3>Search Weather</h3>
         </div>
-        <div class="text-center">
-          <button type="submit" class="btn btn-success btn-md" id="button">
-            Search
-          </button>
-          <p id="info">
-            Location Information
-          </p>
-          <p class="text-center" id="current_time">Current Time: <br /> {{this.weatherData?.current.observation_time}}</p>
-          <p class="text-center" id="current_local_time">Current Local Time: <br /> {{this.weatherData?.location.localtime}}</p>
-          <p class="text-center" id="description">Current weather conditions: <br /> {{this.weatherData?.current.weather_descriptions}}</p>
-          <p class="text-center" id="location">
-            Location Searched: <br /> {{this.weatherData?.location.name}}, {{this.weatherData?.location.country}}
-          </p>
+        <div class="card-body">
+          <form [formGroup]="weatherSearchForm" (ngSubmit)="sendToAPIXU(weatherSearchForm.value)">
+            <div class="form-group">
+              <input class="form-control" type="text" id="weatherLocation" placeholder="Enter a location" formControlName="location" />
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-success btn-lg mt-3" id="button">Search</button>
+            </div>
+          </form>
         </div>
-      </form>
-    </div>
-    <div class="col-md-6">
-      <h3 class="text-center my-4" id="details">Weather Details:</h3>
-      <p class="text-center" id="temperature">Temperature in Degrees Celsius: <br /> {{this.weatherData?.current.temperature}}</p>
-      <p class="text-center" id="precipitation">Precipation Level: <br /> {{this.weatherData?.current.precip}}%</p>
-      <p class="text-center" id="feels_like">Feels like in Degrees Celsius: <br />{{this.weatherData?.current.feelslike}}</p>
+      </div>
+
+      <!-- Weather Information Section -->
+      <div *ngIf="weatherData" class="card shadow-sm">
+        <div class="card-header text-center bg-info text-white">
+          <h3>Weather Details for {{ weatherData?.location.name }}, {{ weatherData?.location.country }}</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              <h5 class="text-center">Current Time</h5>
+              <p class="text-center">{{ weatherData?.current.observation_time }}</p>
+              <h5 class="text-center">Local Time</h5>
+              <p class="text-center">{{ weatherData?.location.localtime }}</p>
+              <h5 class="text-center">Weather Conditions</h5>
+              <p class="text-center">{{ weatherData?.current.weather_descriptions }}</p>
+            </div>
+            <div class="col-md-6">
+              <h5 class="text-center">Temperature</h5>
+              <p class="text-center">{{ weatherData?.current.temperature }} °C</p>
+              <h5 class="text-center">Feels Like</h5>
+              <p class="text-center">{{ weatherData?.current.feelslike }} °C</p>
+              <h5 class="text-center">Precipitation</h5>
+              <p class="text-center">{{ weatherData?.current.precip }}%</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

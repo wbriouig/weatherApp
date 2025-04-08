@@ -1,89 +1,72 @@
-.text-center {
-    font-family: cursive;
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fb;
 }
 
-.form-control {
-    background-color: cornsilk;
+/* Search Form Section */
+.card-header {
+  background-color: #3498db;
+  color: white;
 }
 
-.btn btn-success btn-md {
-  background-color: aqua;
-  border: none;
-  color: aliceblue;
+.card-body {
+  padding: 30px;
 }
-#search_weather {
-  background-blend-mode: hard-light;
-  padding: 200px, 50px, 20px, 50px;
-  font-size: 40px;
-  margin: 50px;
-  color: brown;
+
+input.form-control {
+  font-size: 1.1rem;
+  padding: 15px;
 }
+
+.btn {
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  border-radius: 25px;
+}
+
 #button {
-    margin-top: 30px;
-}
-#info {
-    color: white;
-    font-size: 30px;
-    margin-top: 80px;
-    margin-bottom: 30px;
-    background-color: lightcoral;
-}
-.col-md-6 {
-  background-color: white;
+  margin-top: 20px;
 }
 
-#details {
-  font-size: 40px;
-  margin: 50px;
-  color: brown;
-}
-#temperature {
-  font-size: 22px;
-  margin-top: 100px;
-  color: darkcyan;
-  background-size: cover;
-  text-decoration: underline;
+.card {
+  border-radius: 10px;
 }
 
-#precipitation {
-  font-size: 22px;
-  margin: 50px;
-  color: darkcyan;
-  background-size: cover;
-  text-decoration: underline;
+.text-center {
+  font-size: 1.1rem;
+  color: #2c3e50;
 }
-#description {
-  font-size: 22px;
-  margin: 50px;
-  color: darkcyan;
-  background-size: cover;
-  text-decoration: underline;
+
+/* Weather Details Section */
+.card-header.bg-info {
+  background-color: #1abc9c;
 }
-#current_time {
-  font-size: 22px;
-  margin-top: 50px;
-  color: darkcyan;
-  background-size: cover;
-  text-decoration: underline;
+
+.card-body {
+  font-size: 1.2rem;
 }
-#current_local_time {
-  font-size: 22px;
-  margin: 50px;
-  color: darkcyan;
-  background-size: cover;
-  text-decoration: underline;
+
+.card-body .row {
+  margin-top: 20px;
 }
-#feels_like {
-  font-size: 22px;
-  margin: 50px;
-  color: darkcyan;
-  background-size: cover;
-  text-decoration: underline;
+
+.card-body .col-md-6 {
+  margin-bottom: 20px;
 }
-#location {
-  font-size: 22px;
-  margin: 50px;
-  color: darkcyan;
-  background-size: cover;
-  text-decoration: underline;
+
+h5 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1.3rem;
+  color: #34495e;
+}
+
+@media (max-width: 768px) {
+  .col-md-6 {
+    margin-bottom: 20px;
+  }
 }
