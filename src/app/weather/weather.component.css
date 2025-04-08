@@ -1,0 +1,89 @@
+.text-center {
+    font-family: cursive;
+}
+
+.form-control {
+    background-color: cornsilk;
+}
+
+.btn btn-success btn-md {
+  background-color: aqua;
+  border: none;
+  color: aliceblue;
+}
+#search_weather {
+  background-blend-mode: hard-light;
+  padding: 200px, 50px, 20px, 50px;
+  font-size: 40px;
+  margin: 50px;
+  color: brown;
+}
+#button {
+    margin-top: 30px;
+}
+#info {
+    color: white;
+    font-size: 30px;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    background-color: lightcoral;
+}
+.col-md-6 {
+  background-color: white;
+}
+
+#details {
+  font-size: 40px;
+  margin: 50px;
+  color: brown;
+}
+#temperature {
+  font-size: 22px;
+  margin-top: 100px;
+  color: darkcyan;
+  background-size: cover;
+  text-decoration: underline;
+}
+
+#precipitation {
+  font-size: 22px;
+  margin: 50px;
+  color: darkcyan;
+  background-size: cover;
+  text-decoration: underline;
+}
+#description {
+  font-size: 22px;
+  margin: 50px;
+  color: darkcyan;
+  background-size: cover;
+  text-decoration: underline;
+}
+#current_time {
+  font-size: 22px;
+  margin-top: 50px;
+  color: darkcyan;
+  background-size: cover;
+  text-decoration: underline;
+}
+#current_local_time {
+  font-size: 22px;
+  margin: 50px;
+  color: darkcyan;
+  background-size: cover;
+  text-decoration: underline;
+}
+#feels_like {
+  font-size: 22px;
+  margin: 50px;
+  color: darkcyan;
+  background-size: cover;
+  text-decoration: underline;
+}
+#location {
+  font-size: 22px;
+  margin: 50px;
+  color: darkcyan;
+  background-size: cover;
+  text-decoration: underline;
+}
